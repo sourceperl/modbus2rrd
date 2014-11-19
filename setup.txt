@@ -1,9 +1,11 @@
 # on a Raspberry Pi
 
 # install RRDtool
-sudo apt-get install rrdtool
+sudo apt-get install rrdtool python-rrdtool
 
-# install web server
+# install PyModbusTCP
+sudo pip install pyModbusTCP
+
 # init RRD bases
 cd /home/pi
 mkdir rrd
