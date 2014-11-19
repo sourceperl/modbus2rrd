@@ -1,0 +1,25 @@
+# on a Raspberry Pi
+
+# install RRDtool
+sudo apt-get install rrdtool
+
+# install web server
+# init RRD bases
+cd /home/pi
+mkdir rrd
+cd rrd
+/home/pi/bin/rrd_create.sh
+cp item.rrd pos.rrd
+cp item.rrd flow.rrd
+mv item.rrd setpoint.rrd
+
+# install and setup supervisord
+sudo apt-get install supervisor
+cp /home/pi/supervisord/mbus_poll.conf /etc/supervisor/conf.d/
+sudo supervisorctl update mbus_poll
+
+# install web server
+sudo apt-get install lighttpd
+
+# build graph
+/home/pi/bin/update_graph.sh
