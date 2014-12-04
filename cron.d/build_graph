@@ -1,0 +1,2 @@
+# build graph for web server
+*/5 * * * * pi /home/pi/bin/update_graph.sh >/dev/null 2>&1

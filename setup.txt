@@ -22,6 +22,10 @@ sudo supervisorctl update mbus_poll
 
 # install web server
 sudo apt-get install lighttpd
+# add server.dir-listing = "enable" to lighttpd.conf for set dir index on
 
 # build graph
 /home/pi/bin/update_graph.sh
+
+# auto-build graph
+sudo cp cron.d/build_graph /etc/cron.d/
