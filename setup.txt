@@ -1,4 +1,5 @@
-# on a Raspberry Pi
+# WARN: on a Raspberry Pi, rrd bases must be set to external hard disk
+# SD card have a limited write cycle (near 100 000 writes)
 
 # install RRDtool
 sudo apt-get install rrdtool python-rrdtool
